@@ -23,7 +23,7 @@ export default class Assert {
     }
 
     /**
-     * Checks if given value is boolean
+     * Checks if given value is Boolean
      * @param {*} value
      * @throws {TypeAssertionError}
      * @returns {Boolean} checked value
@@ -37,7 +37,7 @@ export default class Assert {
     }
 
     /**
-     * Checks if given value is string
+     * Checks if given value is String
      * @param {*} value
      * @throws {TypeAssertionError}
      * @returns {String} checked value
@@ -79,7 +79,7 @@ export default class Assert {
     }
 
     /**
-     * Checks if given value is Array
+     * Checks if given value is Null
      * @param {*} value
      * @throws {TypeAssertionError}
      * @returns {null} checked value
@@ -97,7 +97,7 @@ export default class Assert {
      * @param {*} value
      */
     isObject(value) {
-        if (value.constructor && value.constructor.name.toLowerCase() === 'object') {
+        if (value && value.constructor && value.constructor.name.toLowerCase() === 'object') {
             return value;
         }
 

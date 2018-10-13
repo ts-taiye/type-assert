@@ -1,7 +1,7 @@
 import test from 'ava';
 import assert from '../src';
 import { TypeAssertionError } from '../src/exceptions';
-import { except } from './data';
+import { except, only } from './data';
 
 class Test {
 };
@@ -12,6 +12,12 @@ class Test2 {
 test('value instance of class', t => {
     const instance = new Test();
     assert.isInstanceOf(instance, Test);
+    t.pass();
+});
+
+test('value of IntArray is instance of class', t => {
+    const intArray = only('int8array');
+    assert.isInstanceOf(intArray, Int8Array);
     t.pass();
 });
 

@@ -4,7 +4,7 @@ const typeExamples = {
     'undefined': undefined,
     'number': 42,
     'string': '42',
-    'date': Date.now(),
+    'date': new Date(),
     'function': function() {},
     'array': [42, 43],
     'int8array': Int8Array.from([42, -43]),
@@ -23,7 +23,7 @@ const typeExamples = {
     'error': new Error('test'),
     'promise': new Promise(resolve => { resolve(); }),
     'arraybuffer': new ArrayBuffer(42),
-    'sharedarraybuffer': new SharedArrayBuffer(8),
+    'sharedarraybuffer': new SharedArrayBuffer(8), // eslint-disable-line no-undef
     'generatorfunction': function * gen() { yield 1; },
     'asyncfunction': async function() {}
 };
@@ -44,4 +44,13 @@ export function except(...types) {
             object[key] = typeExamples[key];
             return object;
         }, {});
+}
+
+/**
+ * Returns only one type value of given type name
+ * @param type to get value of
+ * @returns {*}
+ */
+export function only(type) {
+    return typeExamples[type];
 }
