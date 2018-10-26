@@ -1,7 +1,7 @@
 import test from 'ava';
-import assert from '../src';
+import assert from '../';
 import { except } from './data';
-import { TypeAssertionError } from '../src/exceptions';
+import { TypeAssertionError } from '../lib/exceptions';
 
 test('value is array', t => {
     assert.isArray([]);

@@ -2,7 +2,7 @@
   "name": "type-assert",
   "version": "0.0.1",
   "description": "Type assertion library inspired by python assert",
-  "main": "index.js",
+  "main": "lib/index.js",
   "author": "Vadim (Taiye) Tsander",
   "license": "MIT",
   "devDependencies": {

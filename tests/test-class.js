@@ -1,6 +1,6 @@
 import test from 'ava';
-import assert from '../src';
-import { TypeAssertionError } from '../src/exceptions';
+import assert from '../';
+import { TypeAssertionError } from '../lib/exceptions';
 import { except, only } from './data';
 
 class Test {
