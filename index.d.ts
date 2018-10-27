@@ -6,11 +6,11 @@ declare class Assert {
     constructor();
     isNumber(value: any): number;
     isBoolean(value: any): boolean;
-    isArray(value: any): Array<any>;
+    isArray<T>(value: T): Array<T>;
     isNull(value: any): null;
     isString(value: any): string;
     isFunction(value: any): Function;
-    // isObject(value: any): Map<any, any>;
+    isObject(value: any): Map<string, any>;
     isInstanceOf<T>(value: T, class_: new () => T): T
 }
 
