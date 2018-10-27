@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "author": "Vadim (Taiye) Tsander",
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "7.1.2",
     "@babel/core": "7.1.2",
@@ -20,6 +21,12 @@
     "eslint-plugin-standard": "^4.0.0",
     "regenerator-runtime": "0.12.1"
   },
+  "files": [
+    "lib",
+    "dist",
+    "index.d.ts",
+    "index.js"
+  ],
   "scripts": {
     "test": "ava tests/test-*"
   },
@@ -27,6 +34,5 @@
     "require": [
       "@babel/register"
     ]
-  },
-  "dependencies": {}
+  }
 }
